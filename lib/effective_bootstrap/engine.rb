@@ -23,13 +23,13 @@ module EffectiveBootstrap
     end
 
     # Adds a before_action to application controller
-    initializer 'effective_bootstrap.action_controller' do |app|
-      if EffectiveBootstrap.save_tabs
-        app.config.to_prepare do
-          ApplicationController.send(:include, EffectiveBootstrap::SaveTabs)
-        end
-      end
-    end
+    # initializer 'effective_bootstrap.action_controller' do |app|
+    #   if EffectiveBootstrap.save_tabs
+    #     app.config.to_prepare do
+    #       ApplicationController.send(:include, EffectiveBootstrap::SaveTabs)
+    #     end
+    #   end
+    # end
 
     initializer 'effective_bootstrap.action_mailer' do |app|
       app.config.to_prepare do
